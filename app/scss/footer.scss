@@ -1,0 +1,149 @@
+@include breakpoint-up(medium) {
+    .flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+@include breakpoint-up(large) {
+    .flexbox {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.footer {
+    // Over footer section styling
+    background-color: $darkBlue;
+    padding: 2.5rem 4.5rem;
+    text-align: center;
+    font-size: .875rem;
+    a {
+        color: $veryLightGray;
+    }
+   
+    
+
+    // Change footer padding in when higher than 640 px
+    @include breakpoint-down(medium) {
+        padding: 2.5rem 15%;
+        .box {
+            margin-bottom: 1.875rem;
+        }
+    }
+    // Change footer padding when higher than 640 px
+    @include breakpoint-up(large) {
+        padding: 2.5rem 9.5rem;
+    }
+    // Image section
+    &-container {
+        @include breakpoint-up(medium) {         
+            display: flex;
+            text-align: left;
+            align-self: flex-start;
+            justify-content: space-between;   
+            flex: 1 100%; 
+        }
+        @include breakpoint-up(large) {
+            display: block;
+            flex: 1.25;
+        }
+    }
+    &-logo {
+        @include breakpoint-up(large) {
+            padding-bottom: 3.5rem;    
+        }
+    }
+    
+    &-icons {
+        
+        :not(:last-child) {
+            padding-right: .875rem;
+        }
+        
+        @include breakpoint-up(medium) {
+            margin-bottom: 0;
+        }
+        
+    }
+    &-icon {
+        svg path {
+            transition: fill 300ms ease-in-out;
+        }
+        &:hover svg path {
+            fill: $limeGreen;
+        } 
+    }
+
+    
+    // Links section
+    &-link-boxes {
+        @include breakpoint-up(medium) {
+            flex: 1 50%;
+        }
+        @include breakpoint-up(large) {
+            justify-content: space-between;
+            flex: 1;
+        }
+    }
+    &-links {
+        display: flex;
+        flex-direction: column;
+        a {     
+            padding-bottom: 1.25rem;                           
+        }  
+        @include breakpoint-up(medium) {
+            text-align: start;
+            &.f-l-2 {
+                padding-left: 2rem;
+            }
+        }
+        @include breakpoint-up(large) {
+            :last-child {
+                padding-bottom: 0;
+            } 
+            &.f-l-2 {
+                padding-left: 0;
+            }
+            
+        }
+              
+    }
+    &-link {
+        transition: color 300ms ease-in-out;
+        &:hover {
+            color: $limeGreen;
+        }
+    }
+    
+    // cta section
+    &-last {
+        @include breakpoint-up(medium) {     
+            flex: 1 50%;
+            text-align: right;      
+        }
+        @include breakpoint-up(large) {   
+            flex: 2;
+        }
+    }
+    &-cta-container {  
+        padding-top: 1rem;
+        padding-bottom: 1.875rem;
+        a {
+            min-width: 163px;
+        }
+        
+        @include breakpoint-up(medium) {
+            padding-top: 0;   
+        }
+    
+    }
+}
+
+
+
+
+

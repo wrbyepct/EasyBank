@@ -1,0 +1,93 @@
+@keyframes fade-in {
+    from {
+        
+        opacity: 0;
+    }
+    
+    to {
+        
+       opacity: .75;
+
+    }
+}
+
+.fade-in {
+    animation: fade-in 200ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+    from {
+        
+        
+       opacity: .75;
+       
+
+    }
+    
+    to {
+        
+       opacity: 0;
+
+    }
+}
+
+.fade-out {
+    animation: fade-out 200ms ease-in-out forwards;
+}
+
+@keyframes slide-in {
+    from {
+        
+        
+        transform: translateY(-150%);
+
+
+    }
+    
+    to {
+        
+        
+        transform: translateY(0%);
+
+    }
+    
+    
+}
+.slide-in {
+    animation: slide-in 200ms ease-in-out forwards;
+}
+
+@keyframes slide-out {
+
+    from {
+        
+        
+        
+        transform: translateY(0%);
+
+    }
+    
+    to {
+        
+        
+        transform: translateY(-150%);
+
+    }
+}
+.slide-out {
+    animation: slide-out 200ms ease-in-out forwards;;
+
+}
+
+.show {
+
+    display: block;
+    
+}
+
+.hide {
+    display: none;
+}
+.noscroll {
+    overflow: hidden;
+}

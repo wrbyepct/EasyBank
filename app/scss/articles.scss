@@ -1,0 +1,118 @@
+.articles{
+    background-color: $veryLightGray;
+    padding: 5.375rem 1.25rem;
+    font-weight: 400;
+    * {
+        margin: 0;
+    }
+    @include breakpoint-up(large) {
+        padding: 5.625rem 5%;
+    }
+    @include breakpoint-up(xlarge) {
+        padding: 5.625rem 9.5rem;
+    }
+    
+    
+    h2, h4 {
+        color: $darkBlue;
+        font-weight: 400;
+        
+    }
+    p {
+        color: $grayishBlue;
+        
+    }
+    .article-header {
+        padding-bottom: 2rem;
+        text-align: center;
+        font-size: 2rem;
+        @include breakpoint-up(large) {
+            padding-bottom: 2.5rem;
+            text-align: left;
+        }
+    }
+    .cards-container {
+        @include breakpoint-up(medium) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1.5rem;
+        }
+        @include breakpoint-up(large) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+        justify-items: center;
+        min-width: 20.5rem;
+        
+        .card-item {
+            background-color: $white;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 1.375rem;
+            
+            max-width: 305px;
+            transition: all 300ms ease-in-out;
+            transition-property: transform, box-shadow, opacity;
+            @include breakpoint-down(small) {
+                margin: 0 auto 1.375rem auto;
+            }
+           
+            @include breakpoint-up(large) {
+                max-width: 256px;
+                
+            }
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 3px 12px rgba($color: #000000, $alpha: 0.15);
+                opacity: 0.9;
+            }
+            
+            .card-img {
+                height: 12.5rem;
+                
+                background-size: cover;
+                background-position: center center;
+            }
+            .card-text {
+                
+                * { 
+                    padding-bottom: .625rem;
+                    
+                }
+                padding: 1.5rem 1.825rem 1.75rem 1.825rem;
+                @include breakpoint-up(large) {
+                    padding: 1.25rem 1.25rem;
+                    
+                }
+                .card-author {
+                    
+                    font-size: .625rem;
+                    
+                }
+                .card-title {
+                    font-size: 1.015rem;
+                    transition: 300ms ease-in-out;
+                    &:hover {
+                        
+                        color: $limeGreen;
+                        
+                    }
+                }
+                .card-description {
+                    line-height: 1.4;
+                    font-size: .805rem;
+                    @include breakpoint-up(large) {
+                        padding-bottom: 0;
+                    }
+                }
+
+            }
+            
+        }
+        
+    }
+    
+    
+
+}

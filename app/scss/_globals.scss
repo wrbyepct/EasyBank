@@ -1,0 +1,119 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+
+}
+p {
+    
+    display: inline-block;
+
+    font-size: $font-sm;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+    color: $grayishBlue;
+    line-height: 1.3;
+    font-size: $font-md;
+    overflow-x: hidden;
+    
+}
+h1, h2, h3 {
+    margin-top: 1.5rem;
+    margin-block: 0;
+}
+
+.container {
+    padding: 1rem 1.5rem;
+    @include breakpoint-up(large) {
+        padding: 1rem 2.5rem;
+    }
+    
+}
+
+//Flexbox style
+.flex {
+    display: flex;
+    &-jc-sb {
+        justify-content: space-between;
+    }
+    &-jc-c {
+        justify-content: center;
+    }
+    &-ai-c {
+        align-items: center;
+    }
+    &-jc-sa {
+        justify-content: space-around;
+    }
+
+    
+    
+}
+
+// Links (Desktop page)
+a, a:visited, a:hover {
+    text-decoration: none;
+    
+}
+
+// Buttons
+button, .button {
+    position: relative;
+    padding: .875rem 2.1875rem;
+    display: inline-block;
+    font-size: $font-sm;
+    border-radius: 45px;
+    border:  0;
+    cursor: pointer;
+    background: linear-gradient( to right, $limeGreen, $brightCyan);
+    color: white;
+    font-weight: 400;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($color: #FFF, $alpha: .25);
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+        
+    }
+    &:hover::before{    
+        opacity: 1;
+    }
+
+        
+   
+    
+}
+
+
+// Visibility 
+.hide-for-mobile {
+    // Hide for tablet and mobile
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+    
+}
+

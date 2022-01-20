@@ -1,0 +1,114 @@
+.features {
+    background-color: $lightGrayishBlue;
+    text-align: center;
+    line-height: 1.8;
+    color: $grayishBlue;
+    padding-top: 4.25rem;
+    margin-top: 5.75rem;
+    
+    h2, h3 {
+        color: $darkBlue;
+        font-weight: 400;
+    }
+    h2 {       
+        padding: 0 1rem;
+        line-height: 1.3;     
+    }
+    @include breakpoint-up(large) {
+        text-align: start;
+        margin: 0;
+        padding: 6.25rem 5%;
+             
+        h3 {
+            font-size: 1.25rem;    
+            margin-top: 1.5rem;
+        }
+        h2 {
+            padding: 0;
+            font-size: 2rem;
+
+        }
+        
+    }
+    @include breakpoint-up(xlarge) {
+        padding: 6.25rem 10rem;
+    }
+    
+    &__header{
+        @include breakpoint-up (medium) {
+            width: 60%;
+            min-width: 500px;
+            
+            
+        }
+        @include breakpoint-up(large) {
+            padding: 0;
+            margin-left: 0;
+            margin-right: auto;
+            width: 38.4375rem;
+            p {
+                font-size: 1rem;
+            } 
+        }
+        
+        width: 80%;
+        padding: 0 1.5rem;
+        min-width: 310.6px;
+        margin-right: auto;
+        margin-left: auto;
+        
+        
+    }
+    &__icons {
+       
+        @include breakpoint-up(medium) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            
+            padding: 0;             
+        }
+        @include breakpoint-up(large) {
+            flex-wrap: nowrap;
+        }
+       
+        
+        padding: 0 1.4rem;
+        margin-top: 2.75rem;
+        
+        
+    }
+    &__icon {
+        
+        @include breakpoint-up(medium) {
+            
+            
+            padding-right: 2.5rem;
+            
+            
+        }
+        @include breakpoint-up (large) {
+
+            &:last-child{
+                padding-right: 0;
+            }
+            
+        }
+        @include breakpoint-up(xlarge) {
+            padding-right: 0;   
+            p {
+                width: 230.7px;
+            }
+        }
+        
+        
+        margin-top: 1.375rem;
+        max-width: 313.6px;
+        margin-right: auto;
+        margin-left: auto;
+        
+    }
+}    
+    
+
+    
